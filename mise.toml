@@ -1,0 +1,6 @@
+[settings]
+lockfile = true
+
+[tools]
+boilerplate = "0"
+task = "3"
