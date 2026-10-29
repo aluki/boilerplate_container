@@ -18,6 +18,13 @@ tasks:
     cmds:
       - mise install
 
+  run:
+    desc: Builds the image
+    sources:
+      - Dockerfile
+    cmds:
+      - img build -t test:latest .
+
   test:
     desc: Test the project
     deps:
