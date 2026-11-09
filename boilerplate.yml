@@ -6,6 +6,7 @@ skip_files:
   - path: .task
   - path: .task/**/*
   - path: mise.lock
+  - path: Taskfile.yml
 
 hooks:
   after:
