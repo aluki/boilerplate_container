@@ -30,10 +30,12 @@ tasks:
       vars:
         - IMAGE
         - TAG
+        - FROM_IMAGE
+        - FROM_TAG
     sources:
       - Dockerfile
     cmds:
-      - img build -t {{ "{{" }}.IMAGE}}:{{ "{{" }}.TAG}} .
+      - img build -t {{ "{{" }}.IMAGE}}:{{ "{{" }}.TAG}} --build-arg "FROM_IMAGE={{ "{{" }}.FROM_IMAGE}}" --build-arg "FROM_TAG={{ "{{" }}.FROM_TAG}}" .
 
   run:
     desc: Runs the image

@@ -1,4 +1,7 @@
-FROM alpine
+ARG FROM_IMAGE=alpine
+ARG FROM_TAG=latest
+
+FROM ${FROM_IMAGE}:${FROM_TAG}
 
 RUN ls
 
