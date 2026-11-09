@@ -1,5 +1,5 @@
 ARG FROM_IMAGE=alpine
-ARG FROM_TAG=latest
+ARG FROM_TAG=edge
 
 FROM ${FROM_IMAGE}:${FROM_TAG}
 
