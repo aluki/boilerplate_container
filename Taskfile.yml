@@ -22,5 +22,9 @@ tasks:
     desc: Test the project
     deps:
       - init
+    vars:
+      TMPDIR:
+        sh: mktemp -d
     cmds:
-      - TMPDIR=$(mktemp -d) && boilerplate --template-url . --output-folder $TMPDIR && rm -r $TMPDIR
+      - defer: rm -rf {{ .TMPDIR }}
+      - boilerplate --template-url . --output-folder {{ .TMPDIR }}
